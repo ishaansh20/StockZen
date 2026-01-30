@@ -10,7 +10,7 @@ const Holdings = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3002/allHoldings", {
+      .get("https://stockzen-jkea.onrender.com/allHoldings", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

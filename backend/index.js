@@ -18,7 +18,20 @@ const JWT_SECRET =
 
 const app = express();
 
-app.use(cors());
+// Configure CORS to allow requests from your frontend
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://stockzen-jkea.onrender.com",
+    // Add your deployed frontend URL here when you deploy it
+    // e.g., 'https://your-frontend-domain.com'
+  ],
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Authentication middleware

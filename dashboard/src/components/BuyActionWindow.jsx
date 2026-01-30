@@ -16,7 +16,7 @@ const BuyActionWindow = ({ uid }) => {
     const token = localStorage.getItem("token");
     axios
       .post(
-        "http://localhost:3002/newOrder",
+        "https://stockzen-jkea.onrender.com/newOrder",
         {
           name: uid,
           qty: stockQuantity,

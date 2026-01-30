@@ -45,11 +45,14 @@ function Signup() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3002/signup", {
-        username: formData.username,
-        email: formData.email,
-        password: formData.password,
-      });
+      const response = await axios.post(
+        "https://stockzen-jkea.onrender.com/signup",
+        {
+          username: formData.username,
+          email: formData.email,
+          password: formData.password,
+        },
+      );
 
       // Store token in localStorage
       localStorage.setItem("token", response.data.token);
