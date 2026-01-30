@@ -1,0 +1,246 @@
+.buy-window-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.container {
+  --radius: 8px;
+  width: 420px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 1000;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.buy-window-header {
+  width: 100%;
+  background: #387ed1;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buy-window-header h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+  
+  .market-options {
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.8rem;
+  }
+  
+  .market-options label,
+  .order-validity label input,
+  .sub-order-type label,
+  .sub-order-type label input,
+  .stop-loss-type label,
+  .stop-loss-type label input {
+    margin-right: 6px;
+    cursor: pointer;
+  }
+  
+  .market-options input[type="radio"] {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 2px;
+    margin-right: 6px;
+  }
+  
+  .tab {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid rgba(180, 180, 180, 0.6);
+  }
+  
+  .tab button {
+    border: none;
+    padding: 14px 16px;
+    background: transparent;
+    color: #4184f3;
+    font-weight: 400;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .regular-order {
+  padding: 20px 24px;
+  background-color: #fff;
+}
+
+.regular-order label {
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.inputs fieldset {
+  flex: 1;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.inputs fieldset legend {
+  font-size: 0.75rem;
+  padding: 0 4px;
+  color: #666;
+  font-weight: 500;
+}
+  
+  .inputs fieldset input {
+  border: none;
+  width: 100%;
+  min-height: 32px;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #424242;
+  font-weight: 500;
+}
+
+.inputs fieldset input:focus {
+  outline: none;
+}
+
+.inputs fieldset:focus-within {
+  border-color: #387ed1;
+}
+
+.buttons {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #f9f9f9;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.margin-info {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.buttons div {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-grey {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.btn-grey:hover {
+  background: #d0d0d0;
+}
+
+.btn-blue {
+  background: #387ed1;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: #2868b8;
+}
+  
+  /* sudo selectors */
+  .tab button::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: none;
+    margin-top: 10px;
+    background-color: #4184f3;
+  }
+  
+  .inputs fieldset:focus {
+    outline: none;
+    border: 0.7px solid rgb(49, 49, 49);
+    border-radius: 2px;
+  }
+  
+  .inputs fieldset input:focus {
+    outline: none;
+  }
+  
+  .inputs fieldset input:focus {
+    outline: none;
+  }
+  
+  .inputs fieldset input:disabled {
+    cursor: not-allowed;
+    background-color: transparent;
+  }
+  
+  .btn-blue:hover {
+    background: #74a7fa;
+  }
+  
+  .btn-grey:hover {
+    background: #9b9b9b;
+    color: #fff;
+  }
+  
